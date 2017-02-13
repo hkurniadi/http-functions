@@ -6,7 +6,7 @@ var requestOptions = {
 };
 
 function printReverse (html) {
-  var str = html.split('').reverse().join('');
+  var str = ((html.split("<pre>")[1]).split("</pre>")[0]).split('').reverse().join('');
   console.log(str);
 }
 
