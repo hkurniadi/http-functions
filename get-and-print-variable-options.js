@@ -1,6 +1,6 @@
 var https = require('https');
 
-function getAndPrintHTMLChunks (option) {
+function getAndPrintHTML (option) {
 
   var bufferVar;
   https.get(option, function(response) {
@@ -23,11 +23,11 @@ function getAndPrintHTMLChunks (option) {
       console.log('Received data stored in a buffer variable: ', bufferVar, '\n');
       console.log('Response stream is complete');
     });
+  });
 }
-
 var requestOptions = {
     host: 'sytantris.github.io',
     path: '/http-examples/step3.html'
   };
 
-getAndPrintHTMLChunks(requestOptions);
+getAndPrintHTML(requestOptions);
